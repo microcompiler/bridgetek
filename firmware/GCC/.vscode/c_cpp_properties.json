@@ -1,0 +1,37 @@
+{
+    "configurations": [
+        {
+            "name": "FT900",
+            "compilerPath": "${env:FT90X_TOOLCHAIN}/tools/bin",
+            "cStandard": "c11",      
+            "includePath": [
+                "${workspaceRoot}",
+                "${workspaceRoot}/include",
+                "${env:FT90X_TOOLCHAIN}/hardware/include",
+                "${env:FT90X_TOOLCHAIN}/hardware/include/private",
+                "${env:FT90X_TOOLCHAIN}/hardware/include/registers",
+                "${env:FT90X_TOOLCHAIN}/tools/ft32-elf/include",
+                "${env:FT90X_TOOLCHAIN}/tools/ft32-elf/sys-include",
+                "${env:FT90X_TOOLCHAIN}/tools/lib/gcc/ft32-elf/7.0.0/include",
+                "${env:FT90X_TOOLCHAIN}/tools/lib/gcc/ft32-elf/7.0.0/include-fixed"
+
+            ],
+            "defines": [
+                "__FT900__"
+            ],
+            "intelliSenseMode": "clang-x64",
+            "browse": {
+                "path": [
+                    "${workspaceRoot}",
+                    "${env:FT90X_TOOLCHAIN}/hardware/include",
+                    "${env:FT90X_TOOLCHAIN}/tools/ft32-elf/include",
+                    "${env:FT90X_TOOLCHAIN}/tools/lib/gcc/ft32-elf/7.0.0/include",
+                    "${env:FT90X_TOOLCHAIN}/tools/lib/gcc/ft32-elf/7.0.0/include-fixed"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": "${workspaceRoot}/.vscode/browse.vc.db"
+            }
+        }
+    ],
+    "version": 4
+}

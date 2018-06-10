@@ -1,0 +1,98 @@
+ {
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "ft32:build",
+            "identifier": "build",
+            "type": "shell",
+            "command": "${workspaceFolder}/scripts/build.cmd",
+            "args": [
+                "--c++",
+                "--clean",
+                "--release"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "presentation": {
+                "echo": false
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": {
+                "base": "$gcc",
+                "fileLocation": [
+                    "absolute"
+                ]
+            }
+        },
+        {
+            "label": "ft32:program",
+            "identifier": "program",
+            "type": "shell",
+            "command": "${workspaceFolder}/scripts/build.cmd",
+            "args": [
+                "--c++",
+                "--clean",
+                "--release",
+                "--program"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "presentation": {
+                "echo": false
+            },
+            "problemMatcher": {
+                "base": "$gcc",
+                "fileLocation": [
+                    "absolute"
+                ]
+            }
+        },
+        {
+            "label": "ft32:debug",
+            "identifier": "debug",
+            "type": "shell",
+            "command": "${workspaceFolder}/scripts/build.cmd",
+            "args": [
+                "--c++",
+                "--clean",
+                "--debug"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "presentation": {
+                "echo": false
+            },
+            "problemMatcher": {
+                "base": "$gcc",
+                "fileLocation": [
+                    "absolute"
+                ]
+            }
+        },
+        {
+            "label": "ft32:bridge",
+            "identifier": "bridge",
+            "isBackground": true,
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "gdb_bridge.py",
+                "live"
+            ],
+            "options": {
+                "cwd": "${env:FT90X_TOOLCHAIN}/utilities"
+            },
+            "presentation": {
+                "echo": false,
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

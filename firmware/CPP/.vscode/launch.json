@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Bridge",
+            "type": "cppdbg",
+            "request": "launch",
+            "stopAtEntry": true,
+            "preLaunchTask":"debug",
+            "program": "${workspaceFolder}/build/firmware.elf",
+            "MIMode": "gdb",
+            "miDebuggerPath": "${env:FT90X_TOOLCHAIN}/tools/bin/ft32-elf-gdb.exe", 
+            "miDebuggerServerAddress": "localhost:9998",
+            "cwd": "${workspaceFolder}",
+            "logging": {
+                "moduleLoad": false,
+                "trace": false,
+                "engineLogging": false,
+                "programOutput": false,
+                "exceptions": true
+            },
+            "setupCommands": [
+                { "text": "-environment-cd ${workspaceRoot}/build", "ignoreFailures": false },
+                { "text": "-file-exec-and-symbols firmware.elf", "description": "load file", "ignoreFailures": false},
+                { "text": "-enable-pretty-printing", "ignoreFailures": false }
+            ]  
+        }
+    ]
+}
