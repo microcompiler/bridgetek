@@ -82,7 +82,7 @@ exit /b
 :Continue
 
 if [%MODE%]==[DEBUG] (
-    set CFLAGS=-Og -g -fvar-tracking -fvar-tracking-assignments -Wall -c -fmessage-length=0 -ffunction-sections -MMD -MP
+    set CFLAGS=-Og -g -fvar-tracking -fvar-tracking-assignments -Wall -c -fmessage-length=0 -ffunction-sections -MMD -MP 
     set LINCLUDE="%FT90X_TOOLCHAIN%/hardware/lib/Debug"
 ) else (
     set CFLAGS=-Os -Wall -c -fmessage-length=0 -ffunction-sections -MMD -MP
@@ -129,10 +129,6 @@ if not [%PROGRAM%]==[YES] (
 
 %PREFIX% -L%LINCLUDE% -Wl,--gc-sections -Wl,--entry=_start -o"..\build\firmware.elf" %LFILES% -lft900 -lc -lstub
 if %ERRORLEVEL% NEQ 0 GOTO Error
-
-if [%MODE%]==[DEBUG] (
-  exit /b
-)
 
 ft32-elf-objcopy --output-target binary "..\build\firmware.elf"  "..\build\firmware.bin"
 if %ERRORLEVEL% NEQ 0 GOTO Error

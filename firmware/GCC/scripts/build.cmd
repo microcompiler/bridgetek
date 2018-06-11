@@ -130,10 +130,6 @@ if not [%PROGRAM%]==[YES] (
 %PREFIX% -L%LINCLUDE% -Wl,--gc-sections -Wl,--entry=_start -o"..\build\firmware.elf" %LFILES% -lft900 -lc -lstub
 if %ERRORLEVEL% NEQ 0 GOTO Error
 
-if [%MODE%]==[DEBUG] (
-  exit /b
-)
-
 ft32-elf-objcopy --output-target binary "..\build\firmware.elf"  "..\build\firmware.bin"
 if %ERRORLEVEL% NEQ 0 GOTO Error
 

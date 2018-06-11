@@ -2,6 +2,8 @@
 
 #define GPIO_NUM (16)
 
+static int count;
+
 namespace first_namespace {
     void setup(){     
         gpio_dir(GPIO_NUM, pad_dir_output);
@@ -9,10 +11,9 @@ namespace first_namespace {
 }
 
 namespace second_namespace {
-    void loop(){             
-        gpio_toggle(GPIO_NUM);           
-        for (int c = 1; c <= 32767; c++)
-            delayms(250);
+    void loop(){
+        if (count < 32767) count++; else count = 0;                      
+            gpio_toggle(GPIO_NUM); 
     }
 }
 

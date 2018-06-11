@@ -2,7 +2,7 @@
 
 Use Visual Studio Code (VSCode) for coding, building and flashing your Bridgetek FT90X projects using the UMFTPD2A debug/programmer module and FT9xx Toolchain.
 
-![Image of Debugging](https://github.com/microcompiler/bridgetek/blob/master/images/vscode-debug.png)
+![Image of Debugging](https://github.com/microcompiler/bridgetek/blob/master/images/vscode-debug.gif)
 
 ### Requirements
 Hardware:
@@ -29,11 +29,11 @@ Open the VSCode Workspace file, which is located in the root of the bridgetek re
 * Tasks -> ft32:program
 
 #### Debugging
-* Tasks -> ft32:bridge
 * Debug -> Start Debugging (or press F5)
 > Set your breakpoints. Note: you can only set breakpoints when the processor is halted, if you set them during run mode, they won’t get applied.
 * Run (F5)
 > Stepping over/in/out, restarting, and changing breakpoints can be done by first pressing the “pause” (F6) button at the top the screen. When done debugging, simply stop (Shift+F5) the debugger.
+* Teriminate Tasks -> ft32:bridge
 
 ### Contributions
 Contributions to this project are always welcome.

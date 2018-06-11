@@ -92,6 +92,7 @@
                 "echo": false,
                 "panel": "dedicated"
             },
+            "dependsOn": "ft32:debug",
             "problemMatcher": []
         }
     ]

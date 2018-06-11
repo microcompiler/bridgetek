@@ -1,13 +1,12 @@
 {
     "version": "0.2.0",
-    "configurations": [
-        
+    "configurations": [      
         {
             "name": "Bridge",
             "type": "cppdbg",
             "request": "launch",
             "stopAtEntry": true,
-            "preLaunchTask":"debug",
+            "preLaunchTask":"ft32:bridge",
             "program": "${workspaceFolder}/build/firmware.elf",
             "MIMode": "gdb",
             "miDebuggerPath": "${env:FT90X_TOOLCHAIN}/tools/bin/ft32-elf-gdb.exe", 
@@ -18,7 +17,7 @@
                 "trace": false,
                 "engineLogging": false,
                 "programOutput": false,
-                "exceptions": false
+                "exceptions": true
             },
             "setupCommands": [
                 { "text": "-environment-cd ${workspaceRoot}/build", "ignoreFailures": false },
