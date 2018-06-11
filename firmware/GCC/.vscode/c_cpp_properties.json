@@ -3,7 +3,7 @@
         {
             "name": "FT900",
             "compilerPath": "${env:FT90X_TOOLCHAIN}/tools/bin",
-            "cStandard": "c11",      
+            "cStandard": "c11",
             "includePath": [
                 "${workspaceRoot}",
                 "${workspaceRoot}/include",
@@ -13,7 +13,7 @@
                 "${env:FT90X_TOOLCHAIN}/tools/ft32-elf/include",
                 "${env:FT90X_TOOLCHAIN}/tools/ft32-elf/sys-include",
                 "${env:FT90X_TOOLCHAIN}/tools/lib/gcc/ft32-elf/7.0.0/include",
-                "${env:FT90X_TOOLCHAIN}/tools/lib/gcc/ft32-elf/7.0.0/include-fixed"
+                "${env:FT90X_TOOLCHAIN}/tools/lib/gcc/ft32-elf/7.0.0/include-fixed" 
 
             ],
             "defines": [

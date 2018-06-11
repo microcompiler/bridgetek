@@ -7,7 +7,7 @@
             "includePath": [
                 "${workspaceRoot}",
                 "${workspaceRoot}/include",
-                "${env:FT90X_TOOLCHAIN}/hardware/include",                
+                "${env:FT90X_TOOLCHAIN}/hardware/include",
                 "${env:FT90X_TOOLCHAIN}/hardware/include/private",
                 "${env:FT90X_TOOLCHAIN}/hardware/include/registers",
                 "${env:FT90X_TOOLCHAIN}/tools/ft32-elf/include",

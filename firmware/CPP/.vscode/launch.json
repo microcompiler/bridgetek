@@ -19,8 +19,9 @@
                 "programOutput": false,
                 "exceptions": true
             },
+            "launchCompleteCommand": "exec-continue",
             "setupCommands": [
-                { "text": "-environment-cd ${workspaceRoot}/build", "ignoreFailures": false },
+                { "text": "-environment-cd ${workspaceFolder}/build", "ignoreFailures": false },
                 { "text": "-file-exec-and-symbols firmware.elf", "description": "load file", "ignoreFailures": false},
                 { "text": "-enable-pretty-printing", "ignoreFailures": false }
             ]
