@@ -11,9 +11,19 @@ namespace first_namespace {
 }
 
 namespace second_namespace {
-    void loop(){
-        if (count < 32767) count++; else count = 0;                      
-            gpio_toggle(GPIO_NUM); 
+    void loop(){                
+        for (short x=0; x < 3; x++){
+            delayms(1);
+        }
+
+        if (count < 65535) {
+            count++; 
+            gpio_toggle(GPIO_NUM);
+            delayms(250);
+        }
+        else {
+            count = 0;
+        }
     }
 }
 

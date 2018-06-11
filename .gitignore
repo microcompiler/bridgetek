@@ -14,4 +14,4 @@
 *.o
 *.elf
 *.bin
-browse.vc.db*
+browse.vc.*
