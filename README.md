@@ -1,13 +1,19 @@
-# VSCode for Bridgetek/FTDI Microcontrollers
+<!--
+Microcontrollers: FT900Q, FT900L,FT901Q, FT901L, FT902Q, FT902L, FT903Q, FT903L, FT905Q, FT905L, FT906Q, FT906L, FT907Q, FT907L, FT908Q, FT908L
+Development Modules: MM900EVxA, MM900EV-LITE, MM930Mini, MM930Lite, MM932LC
+Debugger/programmer: UMFTPD2A
+-->
 
-Use Visual Studio Code (VSCode) for building, debugging and flashing your Bridgetek FT90X projects using the UMFTPD2A debug/programmer module and FT9xx Toolchain.
+# Debugging Bridgetek/FTDI Microcontrollers with Visual Studio Code
+
+This document explains how to use Visual Studio Code (VSCode) for building, debugging and flashing your Bridgetek FT90X projects using the UMFTPD2A debug/programmer module and FT9xx Toolchain.
 
 ![Image of Debugging](https://github.com/microcompiler/bridgetek/blob/master/images/vscode-debug.gif)
 
 ### Requirements
 Hardware:
 * UMFTPD2A debug/programmer module (https://brtchip.com/product/umftpd2a/)
-* MM900EV-LITE development module (http://brtchip.com/product/mm900ev-lite/)
+* FT9xx development module (http://brtchip.com/m-ft9xx/)
 
 Software:
 * Visual Studio Code (https://code.visualstudio.com/)
@@ -19,11 +25,13 @@ Start development by installing Visual Studio Code and Bridgetek Toolchain on yo
 1. Clone the firmware repository
 1. Create an empty ./cpp/build and ./gcc/build folder directories. These directories must be created before you can run a task.
 1. Directly from VSCode (Ctrl+Shift+X) install the following required extension:
-  * C/C++
+   * C/C++
 
 Open the VSCode Workspace file, which is located in the root of the bridgetek repository. It is called firmware.code-workspace. The first time you open it, VSCode will install some dependencies. You should now be ready to compile and test the FT9XX project.
 
 ### Building, Program and Debugging
+Start building, programming and debugging your microcontroller with the following commands:
+
 #### Building the Firmware
 * Tasks -> ft32:build (Ctrl+Shift+B)
 
@@ -37,6 +45,8 @@ Open the VSCode Workspace file, which is located in the root of the bridgetek re
 * Run (F5)
  > Stepping over/in/out, restarting, and changing breakpoints can be done by first pressing the “pause” (F6) button at the top the screen. When done debugging, simply stop (Shift+F5) the debugger.
 * Teriminate Tasks -> ft32:bridge (Alt+Ctrl+T)
+
+<span class="tips">**Tip:** You can use the Debug Console to interact with functionality the UI does not expose via GDB. For example, to see the registers, type `-exec info all-registers`.</span>
 
 ### Contributions
 Contributions to this project are always welcome.

@@ -7,22 +7,23 @@
             "request": "launch",
             "stopAtEntry": true,
             "preLaunchTask":"ft32:bridge",
-            "program": "${workspaceFolder}/build/firmware.elf",
+            "program": "${workspaceFolder}\\build\\firmware.elf",
             "MIMode": "gdb",
-            "miDebuggerPath": "${env:FT90X_TOOLCHAIN}/tools/bin/ft32-elf-gdb.exe", 
+            "miDebuggerPath": "${env:FT90X_TOOLCHAIN}\\tools\\bin\\ft32-elf-gdb.exe", 
             "miDebuggerServerAddress": "localhost:9998",
             "cwd": "${workspaceFolder}",
             "logging": {
                 "moduleLoad": false,
                 "trace": false,
                 "engineLogging": false,
-                "programOutput": false,
+                "programOutput": true,
                 "exceptions": true
             },
+            "targetArchitecture": "arm",
             "launchCompleteCommand": "exec-continue", 
             "setupCommands": [
-                { "text": "-environment-cd ${workspaceFolder}/build", "ignoreFailures": false },
-                { "text": "-file-exec-and-symbols firmware.elf", "description": "load file", "ignoreFailures": false},
+                { "text": "-environment-cd ${workspaceFolder}\\build","ignoreFailures": false },
+                { "text": "-file-exec-and-symbols firmware.elf", "ignoreFailures": false},
                 { "text": "-enable-pretty-printing", "ignoreFailures": false }
             ]  
         }
