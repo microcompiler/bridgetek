@@ -46,7 +46,7 @@ Start building, programming and debugging your microcontroller with the followin
  > Stepping over/in/out, restarting, and changing breakpoints can be done by first pressing the “pause” (F6) button at the top the screen. When done debugging, simply stop (Shift+F5) the debugger.
 * Teriminate Tasks -> ft32:bridge (Alt+Ctrl+T)
 
-<span class="tips">**Tip:** You can use the Debug Console to interact with functionality the UI does not expose via GDB. For example, to see the registers, type `-exec info all-registers`.</span>
+<span class="tips">**Tip:** You can use the Debug Console to interact with GDB functionality the UI does not expose. For example, to see the registers, type `-exec info all-registers`.</span>
 
 ### Contributions
 Contributions to this project are always welcome.
