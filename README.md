@@ -23,7 +23,6 @@ Software:
 Start development by installing Visual Studio Code and Bridgetek Toolchain on your PC, then finally how to clone, build and run the C/C++ code.
 1. Download and install VSCode and the FT9xx Toolchain (only the toolchain, python and drivers are required)
 1. Clone the firmware repository
-1. Create an empty ./cpp/build and ./gcc/build folder directories. These directories must be created before you can run a task.
 1. Directly from VSCode (Ctrl+Shift+X) install the following required extension:
    * C/C++
 
