@@ -1,10 +1,10 @@
 <!--
-Micro controllers: FT900Q, FT900L,FT901Q, FT901L, FT902Q, FT902L, FT903Q, FT903L, FT905Q, FT905L, FT906Q, FT906L, FT907Q, FT907L, FT908Q, FT908L
+Microcontrollers: FT900Q, FT900L,FT901Q, FT901L, FT902Q, FT902L, FT903Q, FT903L, FT905Q, FT905L, FT906Q, FT906L, FT907Q, FT907L, FT908Q, FT908L
 Development Modules: MM900EVxA, MM900EV-LITE, MM930Mini, MM930Lite, MM932LC
 Debugger/programmer: UMFTPD2A
 -->
 
-# Debugging Bridgetek/FTDI Micro controllers with Visual Studio Code
+# Debugging Bridgetek/FTDI MCU with Visual Studio Code
 
 This document explains how to use Visual Studio Code (VSCode) for building, debugging and flashing your Bridgetek FT90X projects using the UMFTPD2A debug/programmer module and FT9xx Toolchain.
 
@@ -30,7 +30,7 @@ Start development by installing Visual Studio Code and Bridgetek Toolchain on yo
 Open the VSCode Workspace file, which is located in the root of the bridgetek repository. It is called firmware.code-workspace. The first time you open it, VSCode will install some dependencies. You should now be ready to compile and test the FT9XX project.
 
 ### Building, Program and Debugging
-Start building, programming and debugging your micro controller with the following commands:
+Start building, programming and debugging your microcontroller with the following commands:
 
 #### Building the Firmware
 * Tasks -> ft32:build (Ctrl+Shift+B)
